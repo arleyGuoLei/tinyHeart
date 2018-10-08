@@ -8,6 +8,7 @@ let imgPic;
 let canWidth;
 let canHeight;
 var ane;
+var fruit;
 
 document.body.onload = function () {
     init();
@@ -31,6 +32,9 @@ function init() {
     ane = new aneObj();
     ane.init();
 
+    fruit = new fruitObj();
+    fruit.init();
+
     gameLoop();
 }
 
@@ -43,4 +47,6 @@ function gameLoop() {
 
     drawBg();
     ane.draw();
+    fruit.draw();
+    fruitMonitor();
 }

@@ -13,12 +13,12 @@ var aneObj = function () {
     this.len = [];
 }
 
-aneObj.prototype.num = 20;
+aneObj.prototype.num = 30;
 aneObj.prototype.init = function () {
     console.log(this);
-    for (var i=0;i < this.num;i++){
-        this.x[i] = i * 16 + Math.random()*10;
-        this.len[i] = 95 + Math.random()*10;
+    for (var i = 0; i < this.num; i++) {
+        this.x[i] = i * 10 + Math.random() * 10;
+        this.len[i] = 95 + Math.random() * 10;
     }
 }
 
@@ -30,10 +30,10 @@ aneObj.prototype.draw = function () {
     ctx2.lineWidth = 10;
     ctx2.lineCap = "round";
     ctx2.globalAlpha = 0.6;
-    for (var i=0;i<this.num;i++){
+    for (var i = 0; i < this.num; i++) {
         ctx2.beginPath();
-        ctx2.moveTo(this.x[i],canHeight);//开始坐标
-        ctx2.lineTo(this.x[i],this.len[i]);//结束坐标
+        ctx2.moveTo(this.x[i], canHeight);//开始坐标
+        ctx2.lineTo(this.x[i], this.len[i]);//结束坐标
         ctx2.stroke();
     }
     ctx2.restore();
