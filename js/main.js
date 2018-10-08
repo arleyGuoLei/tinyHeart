@@ -1,13 +1,3 @@
-/*绘制海葵 api
-*绘制直线
-* beginPath
-* closePath
-* strokeStyle
-* stroke
-* lineWidth
-* lineCap
-*/
-
 let can1;
 let can2;
 let ctx1;
@@ -17,6 +7,7 @@ let duration;
 let imgPic;
 let canWidth;
 let canHeight;
+var ane;
 
 document.body.onload = function () {
     init();
@@ -36,6 +27,10 @@ function init() {
 
     duration = 0;
     lastTime = new Date().getTime();
+
+    ane = new aneObj();
+    ane.init();
+
     gameLoop();
 }
 
@@ -47,4 +42,5 @@ function gameLoop() {
     lastTime = now;
 
     drawBg();
+    ane.draw();
 }
