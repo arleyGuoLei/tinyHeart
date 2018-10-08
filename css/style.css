@@ -1,0 +1,24 @@
+.all-bg{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+#allCanvas{
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+#allCanvas>canvas{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#canvas1{
+    z-index: 1;
+}
+#canvas2{
+    z-index: 0;
+}
